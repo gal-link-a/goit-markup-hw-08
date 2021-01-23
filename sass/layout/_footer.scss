@@ -1,0 +1,158 @@
+.footer {
+  background: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.logo-right-part-footer {
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.192;
+
+  letter-spacing: 0.03em;
+  color: var(--reserve-text-color);
+}
+
+.footer-address-link {
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+
+  letter-spacing: 0.03em;
+
+  color: var(--reserve-text-color);
+}
+
+.footer-mail-link {
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-tel-link {
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-logo-link {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.footer-address-list > li {
+  margin-bottom: 9px;
+}
+
+.footer-address-list {
+  & > li {
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.footer {
+  .container {
+    display: flex;
+    justify-self: start;
+    align-items: baseline;
+  }
+}
+/* =====footer social links======= */
+.footer-social {
+  margin-left: 70px;
+}
+.join,
+.subs-title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--reserve-text-color);
+}
+.footer-social-list {
+  display: flex;
+  justify-content: space-between;
+  width: 206px;
+}
+.footer-social-link {
+  @include flex(center, center);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--reserve-text-color);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-social-link {
+  &:hover,
+  &:focus {
+    background-color: var(--accent-text-color);
+  }
+}
+
+.social-logo {
+  fill: currentColor;
+}
+
+/* ======== subscription ========= */
+.subscription-form {
+  display: block;
+  margin-left: 100px;
+  width: 570px;
+}
+
+.icon-send {
+  margin-left: 10px;
+  fill: currentColor;
+}
+
+.subscription {
+  display: flex;
+}
+
+.subs-input {
+  padding: 15px 16px;
+  min-width: 358px;
+  min-height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  color: #ffffff;
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subs-input {
+  &:focus {
+    outline: 1px solid var(--accent-text-color);
+  }
+}
+
+.subs-input {
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}

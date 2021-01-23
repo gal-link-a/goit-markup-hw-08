@@ -1,0 +1,49 @@
+.advant {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.advant-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.advant-list-item {
+  width: 270px;
+}
+
+.advant-item-title {
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+
+  color: var(--main-text-color);
+}
+
+.advant-item-text {
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+
+  color: var(--secondary-text-color);
+}
+
+.advantage-icon {
+  width: 70px;
+  height: 70px;
+}
+.advantage-icon-wrapper {
+  margin-bottom: 30px;
+  padding: 25px 100px;
+  height: 120px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+}
