@@ -19,11 +19,27 @@
 
   <header class="header">
     <div class="container header-container">
-  
+ 
       <a href="/" class="logo-link">
         <span class="logo-left-part">Web</span><span class="logo-right-part-header">Studio</span>
       </a>
-      <nav class="navigation">
+
+      <button type="button" class="menu-button is-open" 
+      aria-expanded="false" 
+      aria-controls="mobile-menu" 
+      data-menu-button>
+        <svg class="menu-pic" 
+        aria-label="переключатель мобильного меню" 
+        width="40"
+        height="40">
+          <use class="icon-menu"
+           href="./images/sprite.svg#icon-menu"></use>
+          <use class="icon-cross"
+          href="./images/sprite.svg#icon-cross"></use>
+        </svg>
+      </button>
+     
+      <nav class="navigation is-open">
         <ul class="navigation-list">
           <li class="navigation-list-item">
             <a class="navigation-list-link current" href="./index.html">Студия</a>
