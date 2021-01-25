@@ -35,7 +35,7 @@
 
 .navigation {
   display: none;
-
+  height: 453px;
   width: 100%;
   position: absolute;
   background-color: #fff;
@@ -70,7 +70,7 @@
     display: none;
   }
 
-  .icon-cross {
+  .icon-menu {
     display: none;
   }
   :hover,
@@ -79,11 +79,11 @@
   }
 }
 .menu-button.is-open {
-  .icon-cross {
+  .icon-menu {
     display: block;
     position: relative;
   }
-  .icon-menu {
+  .icon-cross {
     display: none;
   }
 }

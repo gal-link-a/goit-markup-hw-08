@@ -142,6 +142,7 @@ textarea {
 
 .navigation {
   display: none;
+  height: 453px;
   width: 100%;
   position: absolute;
   background-color: #fff;
@@ -184,7 +185,7 @@ textarea {
   }
 }
 
-.menu-button .icon-cross {
+.menu-button .icon-menu {
   display: none;
 }
 
@@ -193,12 +194,12 @@ textarea {
   color: var(--accent-text-color);
 }
 
-.menu-button.is-open .icon-cross {
+.menu-button.is-open .icon-menu {
   display: block;
   position: relative;
 }
 
-.menu-button.is-open .icon-menu {
+.menu-button.is-open .icon-cross {
   display: none;
 }
 
