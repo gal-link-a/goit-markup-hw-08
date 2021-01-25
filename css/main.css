@@ -172,12 +172,16 @@ textarea {
 
 .menu-button {
   display: inline-flex;
-  margin-left: auto;
+  margin: 0;
+  padding: 0;
   border: none;
   background-color: transparent;
-  z-index: 9999;
-  outline: none;
-  transition: color var(--main-text-color);
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
 }
 
 .menu-button .icon-cross {
