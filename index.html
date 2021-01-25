@@ -19,62 +19,56 @@
 
   <header class="header">
     <div class="container header-container">
- 
+    
       <a href="/" class="logo-link">
         <span class="logo-left-part">Web</span><span class="logo-right-part-header">Studio</span>
       </a>
-
-      <button type="button" class="menu-button is-open" 
-      aria-expanded="false" 
-      aria-controls="mobile-menu" 
-      data-menu-button>
-        <svg class="menu-pic" 
-        aria-label="переключатель мобильного меню" 
-        width="40"
-        height="40">
-          <use class="icon-menu"
-           href="./images/sprite.svg#icon-menu"></use>
-          <use class="icon-cross"
-          href="./images/sprite.svg#icon-cross"></use>
+      <button type="button" class="menu-button" aria-expanded="false" aria-controls="mobile-menu" data-menu-button>
+        <svg class="menu-pic" aria-label="переключатель меню" width="40" height="40">
+          <use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
+          <use class="icon-cross" href="./images/sprite.svg#icon-cross"></use>
         </svg>
       </button>
-     
-      <nav class="navigation is-open">
-        <ul class="navigation-list">
-          <li class="navigation-list-item">
-            <a class="navigation-list-link current" href="./index.html">Студия</a>
-          </li>
-          <li class="navigation-list-item">
-            <a class="navigation-list-link" href="./portfolio.html">Портфолио</a>
-          </li>
-          <li class="navigation-list-item">
-            <a class="navigation-list-link" href="#">Контакты</a>
-          </li>
-        </ul>
-  
-  
-        <div class="contacts">
-  
-          <address class="address">
-            <a class="header-mail-link" href="mailto:info@devstudio.com">
-              <svg class="contact-icon" width="16px" height="12px">
-                <use href="./images/sprite.svg#icon-envelopesvg"></use>
-              </svg>
-              info@devstudio.com</a>
-          </address>
-          <address class="address">
-            <a class="header-tel-link" href="tel:+380961111111">
-              <svg class="contact-icon" width="11px" height="16px">
-                <use href="./images/sprite.svg#icon-phonesvg"></use>
-              </svg>
-              +38 096 111 11 11</a>
-          </address>
-  
-        </div>
-      </nav>
+    
+      <!-- <div class="menu" id="menu" data-menu> -->
+        <nav class="navigation">
+         
+          <ul class="navigation-list">
+            <li class="navigation-list-item">
+                    <a class="navigation-list-link current" href="./index.html">Студия</a>
+                </li>
+                <li class="navigation-list-item">
+                    <a class="navigation-list-link" href="./portfolio.html">Портфолио</a>
+                </li>
+                <li class="navigation-list-item">
+                    <a class="navigation-list-link" href="#">Контакты</a>
+                </li>
+            </ul>
+
+
+            <div class="contacts">
+
+                <address class="address">
+                    <a class="header-mail-link" href="mailto:info@devstudio.com">
+                        <svg class="contact-icon" width="16px" height="12px">
+                            <use href="./images/sprite.svg#icon-envelopesvg"></use>
+                        </svg>
+                        info@devstudio.com</a>
+                </address>
+                <address class="address">
+                    <a class="header-tel-link" href="tel:+380961111111">
+                        <svg class="contact-icon" width="11px" height="16px">
+                            <use href="./images/sprite.svg#icon-phonesvg"></use>
+                        </svg>
+                        +38 096 111 11 11</a>
+                </address>
+
+            </div>
+        </nav>
+        <!-- </div> -->
     </div>
-  
-  </header>
+
+</header>
   <main>
     <!--HERO-->
 
@@ -155,15 +149,31 @@
 
         <ul class="activ-list list">
           <li class="activ-list-item">
-            <img src="./images/img-adv1.png" alt="разработчик пишет код" width="370" height="294" />
+            <img class="activ-item__image"
+                src="./images/activ/img-services-1.jpg"
+                srcset="./images/activ/img-services-1@2x.jpg 2x"
+                alt="программист работает по ТЗ"
+                width="370" 
+                height="294"
+                />
             <h3 class="activ-item-title">Десктопные приложения</h3>
           </li>
           <li class="activ-list-item">
-            <img src="./images/img-adv2.png" alt="разработка моб. приложения" width="370" height="294" />
+            <img class="activ-item__image" src="./images/activ/img-services-2.jpg"
+              srcset="./images/activ/img-services-2@2x.jpg 2x" 
+              alt="веб дизайн для приложений на смартфоне"
+              width="370"
+              height="294" />
+
             <h3 class="activ-item-title">Мобильные приложения</h3>
           </li>
           <li class="activ-list-item">
-            <img src="./images/img-adv3.png" alt="выбор цвета для продукта" width="370" height="294" />
+            <img class="activ-item__image"
+                src="./images/activ/img-services-3.jpg"
+                srcset="./images/activ/img-services-3@2x.jpg 2x"
+                alt="разработка веб дизайна креативщиком"
+                 width="370"
+                 height="294" />
             <h3 class="activ-item-title">Дизайнерские решения</h3>
           </li>
         </ul>
@@ -180,7 +190,24 @@
 
         <ul class="our-team-list list">
           <li class="our-team-card">
-            <img src="./images/img1.jpg" alt="Игорь Демьяненко" width="270" height="260" />
+            <picture>
+              <source srcset="./images/team/igor-desktop.webp, ./images/team/igor-desktop@2x.webp 2x"
+               media="(min-width: 1200px)"
+                type="image/webp">
+              <source srcset="./images/team/igor-desktop.jpg, ./images/team/igor-desktop@2x.jpg 2x"
+               media="(min-width: 1200px)">
+              <source srcset="./images/team/igor-tablet.webp, ./images/team/igor-tablet@2x.webp 2x"
+               media="(min-width: 768px)" type="image/webp">
+              <source srcset="./images/team/igor-tablet.jpg, ./images/team/igor-tablet@2x.jpg 2x" 
+              media="(min-width: 768px)">
+              <source srcset="./images/team/igor.webp, ./images/team/igor@2x.webp 2x" 
+              media="(min-width: 320px)" type="image/webp">
+              <source srcset="./images/team/igor.jpg, ./images/team/igor@2x.jpg 2x" 
+              media="(min-width: 320px)">
+            <img class="team-item__photo"
+            src="./images/img1.jpg" alt="Игорь Демьяненко"/>
+            </picture>
+
             <div class="our-team-desc">
               <h3 class="our-team-name">Игорь Демьяненко</h3>
               <p lang="en" class="our-team-text">Product Designer</p>
@@ -199,6 +226,62 @@
                       <use href="./images/sprite.svg#icon-twittersvg"></use>
                     </svg>
                   </a>
+                  </li>
+                  <li class="our-team-social-item">
+                    <a class="our-team-social-link" href="https://www.facebook.com/" rel="noreferrer noopener" target="_blank">
+                      <svg class="social-network" width="20px" height="20px" aria-label="facebook">
+                        <use href="./images/sprite.svg#icon-facebooksvg"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="our-team-social-item">
+                    <a class="our-team-social-link" href="https://www.linkedin.com/" rel="noreferrer noopener" target="_blank">
+                      <svg class="social-network" width="20px" height="20px" aria-label="linkedin">
+                        <use href="./images/sprite.svg#icon-linkedinsvg"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  </ul>
+                  </div>
+                  </li>
+                  <li class="our-team-card">
+                    <picture>
+                      <source srcset="./images/team/olga-desktop.webp, ./images/team/olga-desktop@2x.webp 2x" 
+                      media="(min-width: 1200px)"
+                        type="image/webp">
+                      <source srcset="./images/team/olga-desktop.jpg, ./images/team/olga-desktop@2x.jpg 2x" 
+                      media="(min-width: 1200px)">
+                      <source srcset="./images/team/olga-tablet.webp, ./images/team/olga-tablet@2x.webp 2x" 
+                      media="(min-width: 768px)"
+                        type="image/webp">
+                      <source srcset="./images/team/olga-tablet.jpg, ./images/team/olga-tablet@2x.jpg 2x"
+                       media="(min-width: 768px)">
+                      <source srcset="./images/team/olga.webp, ./images/team/olga@2x.webp 2x" 
+                      media="(min-width: 320px)"
+                        type="image/webp">
+                      <source srcset="./images/team/olga.jpg, ./images/team/olga@2x.jpg 2x" 
+                      media="(min-width: 320px)">
+                  
+                      <img class="team-item__photo" src="./images/img2.jpg" alt="Ольга Репина" />
+                    </picture>
+                    <div class="our-team-desc">
+                      <h3 class="our-team-name">Ольга Репина</h3>
+                      <p lang="en" class="our-team-text">Frontend Developer</p>
+                  
+                      <ul class="our-team-social-list">
+                        <li class="our-team-social-item">
+                          <a class="our-team-social-link" href="https://www.instagram.com/" rel="noreferrer noopener" target="_blank">
+                            <svg class="social-network" width="20px" height="20px" aria-label="instagram">
+                              <use href="./images/sprite.svg#icon-instagramsvg"></use>
+                            </svg>
+                          </a>
+                        </li>
+                <li class="our-team-social-item">
+                  <a class="our-team-social-link" href="https://www.twitter.com/" rel="noreferrer noopener" target="_blank">
+                    <svg class="social-network" width="20px" height="20px" aria-label="twitter">
+                      <use href="./images/sprite.svg#icon-twittersvg"></use>
+                    </svg>
+                  </a>
                 </li>
                 <li class="our-team-social-item">
                   <a class="our-team-social-link" href="https://www.facebook.com/" rel="noreferrer noopener" target="_blank">
@@ -213,16 +296,33 @@
                       <use href="./images/sprite.svg#icon-linkedinsvg"></use>
                     </svg>
                   </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="our-team-card">
-            <img src="./images/img2.jpg" alt="Ольга Репина" width="270" height="260" />
-            <div class="our-team-desc">
-              <h3 class="our-team-name">Ольга Репина</h3>
-              <p lang="en" class="our-team-text">Frontend Developer</p>
+                  </li>
+                  </ul>
+                  </div>
+                  </li>
+                  
+                  <li class="our-team-card">
+                    <picture>
+                      <source srcset="./images/team/nik-desktop.webp, ./images/team/nik-desktop@2x.webp 2x" 
+                      media="(min-width: 1200px)"
+                        type="image/webp">
+                      <source srcset="./images/team/nik-desktop.jpg, ./images/team/nik-desktop@2x.jpg 2x" 
+                      media="(min-width: 1200px)">
+                      <source srcset="./images/team/nik-tablet.webp, ./images/team/nik-tablet@2x.webp 2x"
+                       media="(min-width: 768px)"
+                        type="image/webp">
+                      <source srcset="./images/team/nik-tablet.jpg, ./images/team/nik-tablet@2x.jpg 2x" 
+                      media="(min-width: 768px)">
+                      <source srcset="./images/team/nik.webp, ./images/team/nik@2x.webp 2x"
+                       media="(min-width: 320px)" type="image/webp">
+                      <source srcset="./images/team/nik.jpg, ./images/team/nik@2x.jpg 2x" 
+                      media="(min-width: 320px)">
+                  
+                      <img class="team-item__photo" src="./images/img3.jpg" alt="Николай Тарасов" />
+                    </picture>
+                    <div class="our-team-desc">
+                      <h3 class="our-team-name">Николай Тарасов</h3>
+                      <p lang="en" class="our-team-text">Marketing</p>
 
               <ul class="our-team-social-list">
                 <li class="our-team-social-item">
@@ -252,53 +352,30 @@
                       <use href="./images/sprite.svg#icon-linkedinsvg"></use>
                     </svg>
                   </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="our-team-card">
-            <img src="./images/img3.jpg" alt="Николай Тарасов" width="270" height="260" />
-            <div class="our-team-desc">
-              <h3 class="our-team-name">Николай Тарасов</h3>
-              <p lang="en" class="our-team-text">Marketing</p>
-
-              <ul class="our-team-social-list">
-                <li class="our-team-social-item">
-                  <a class="our-team-social-link" href="https://www.instagram.com/" rel="noreferrer noopener" target="_blank">
-                    <svg class="social-network" width="20px" height="20px" aria-label="instagram">
-                      <use href="./images/sprite.svg#icon-instagramsvg"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="our-team-social-item">
-                  <a class="our-team-social-link" href="https://www.twitter.com/" rel="noreferrer noopener" target="_blank">
-                    <svg class="social-network" width="20px" height="20px" aria-label="twitter">
-                      <use href="./images/sprite.svg#icon-twittersvg"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="our-team-social-item">
-                  <a class="our-team-social-link" href="https://www.facebook.com/" rel="noreferrer noopener" target="_blank">
-                    <svg class="social-network" width="20px" height="20px" aria-label="facebook">
-                      <use href="./images/sprite.svg#icon-facebooksvg"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="our-team-social-item">
-                  <a class="our-team-social-link" href="https://www.linkedin.com/" rel="noreferrer noopener" target="_blank">
-                    <svg class="social-network" width="20px" height="20px" aria-label="linkedin">
-                      <use href="./images/sprite.svg#icon-linkedinsvg"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="our-team-card">
-            <img src="./images/img4.jpg" alt="Михаил Ермаков" width="270" height="260" />
-            <div class="our-team-desc">
+                  </li>
+                  </ul>
+                  </div>
+                  </li>
+                  
+                  <li class="our-team-card">
+                    <picture>
+                      <source srcset="./images/team/michail-desktop.webp, ./images/team/michail-desktop@2x.webp 2x"
+                        media="(min-width: 1200px)" type="image/webp">
+                      <source srcset="./images/team/michail-desktop.jpg, ./images/team/michail-desktop@2x.jpg 2x"
+                        media="(min-width: 1200px)">
+                      <source srcset="./images/team/michail-tablet.webp, ./images/team/michail-tablet@2x.webp 2x"
+                        media="(min-width: 768px)" type="image/webp">
+                      <source srcset="./images/team/michail-tablet.jpg, ./images/team/michail-tablet@2x.jpg 2x"
+                        media="(min-width: 768px)">
+                      <source srcset="./images/team/michail.webp, ./images/team/michail@2x.webp 2x" 
+                      media="(min-width: 320px)"
+                        type="image/webp">
+                      <source srcset="./images/team/michail.jpg, ./images/team/michail@2x.jpg 2x"
+                       media="(min-width: 320px)">
+                  
+                      <img class="team-item__photo" src="./images/img4.jpg" alt="Михаил Ермаков" />
+                    </picture>
+                    <div class="our-team-desc">
               <h3 class="our-team-name">Михаил Ермаков</h3>
               <p lang="en" class="our-team-text">UI Designer</p>
               

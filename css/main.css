@@ -137,6 +137,7 @@ textarea {
 .header-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .navigation {
@@ -285,32 +286,6 @@ textarea {
   .header-tel-link {
     font-size: 14px;
   }
-}
-
-.menu-button {
-  display: inline-flex;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-}
-
-@media screen and (min-width: 768px) {
-  .menu-button {
-    display: none;
-  }
-}
-
-.menu-button .icon-cross {
-  display: none;
-}
-
-.menu-button.is-open .icon-cross {
-  display: block;
-}
-
-.menu-button.is-open .icon-menu {
-  display: none;
 }
 
 .modal-btn,
@@ -608,6 +583,39 @@ textarea {
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-desktop@2x.jpg);
+  }
+}
+
+.hero {
+  max-width: 1600px;
+  padding: 118px 0;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-family: var(--main-font-family);
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.64;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  width: 100%;
+  margin: 0 auto 30px;
+  color: var(--reserve-text-color);
+}
+
+@media screen and (min-width: 480px) {
+  .hero-title {
+    width: 360px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
   }
 }
 
