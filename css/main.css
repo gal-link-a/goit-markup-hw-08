@@ -141,6 +141,7 @@ textarea {
 }
 
 .navigation {
+  display: none;
   width: 100%;
   position: absolute;
   background-color: #fff;
@@ -149,6 +150,12 @@ textarea {
   z-index: 2;
   padding-bottom: 60px;
   border-top: 1px solid #ececec;
+}
+
+@media screen and (max-width: 767px) {
+  .navigation.is-open {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -161,6 +168,34 @@ textarea {
     padding-bottom: unset;
     border-top: unset;
   }
+}
+
+.menu-button {
+  display: inline-flex;
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  z-index: 9999;
+  outline: none;
+  transition: color var(--main-text-color);
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button :hover,
+.menu-button :focus {
+  color: var(--accent-text-color);
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+  position: relative;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
 }
 
 .navigation-list {

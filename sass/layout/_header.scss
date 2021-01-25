@@ -34,6 +34,8 @@
 }
 
 .navigation {
+  display: none;
+
   width: 100%;
   position: absolute;
   background-color: #fff;
@@ -42,6 +44,11 @@
   z-index: 2;
   padding-bottom: 60px;
   border-top: 1px solid #ececec;
+  @media screen and (max-width: 767px) {
+    &.is-open {
+      display: block;
+    }
+  }
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
@@ -53,6 +60,32 @@
   }
 }
 
+.menu-button {
+  display: inline-flex;
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  z-index: 9999;
+  outline: none;
+  transition: color var(--main-text-color);
+
+  .icon-cross {
+    display: none;
+  }
+  :hover,
+  :focus {
+    color: var(--accent-text-color);
+  }
+}
+.menu-button.is-open {
+  .icon-cross {
+    display: block;
+    position: relative;
+  }
+  .icon-menu {
+    display: none;
+  }
+}
 .navigation-list {
   display: flex;
   flex-direction: column;
